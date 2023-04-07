@@ -155,6 +155,9 @@ class AppleAuth {
                     }).then((response) => {
                         resolve(response.data);
                     }).catch((err) => {
+                        console.log("---- APPLE AUTH ERROR ----")
+                        console.log(err)
+                        console.log("---- ----")
                         reject("AppleAuth Error - An error occurred while getting response from Apple's servers: " + err);
                     });
                 }).catch((err) => {
